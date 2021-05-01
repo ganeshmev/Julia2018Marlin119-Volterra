@@ -74,7 +74,7 @@
 #elif BV(JULIA_2018_PRO_DUAL_A) || BV(JULIA_2018_PRO_DUAL_A24)
   #define X_BED_SIZE  395
   #define Y_BED_SIZE  400
-  #define Z_MAX_POS   420
+  #define Z_MAX_POS   415
 #endif
 
 /** Min Pos **/
@@ -217,9 +217,9 @@
 #define TEMP_BED_RESIDENCY_TIME 2
 
 /**  PID temperature settings  **/
-#define  DEFAULT_Kp   67.13 // 42.96
-#define  DEFAULT_Ki   10.75 // 5.14
-#define  DEFAULT_Kd   104.85 // 89.73
+#define  DEFAULT_Kp   33.65//67.13 // 42.96///Hot tighten at 395DegC
+#define  DEFAULT_Ki   6.22//10.75 // 5.14
+#define  DEFAULT_Kd   45.49//104.85 // 89.73
 
 /**  Thermal Runaway  **/
 #if NBV(JULIA_2018_GLCD)
