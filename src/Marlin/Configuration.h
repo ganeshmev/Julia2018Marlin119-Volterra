@@ -612,7 +612,7 @@
  */
 // #define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
 
-/**
+/** 
  * Default Max Acceleration (change/s) change = mm/s
  * (Maximum start speed for accelerated moves)
  * Override with M201

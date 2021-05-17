@@ -1089,39 +1089,39 @@
  */
 #if HAS_DRIVER(TMC26X)
 
-  #define X_MAX_CURRENT     1000 // in mA
+  #define X_MAX_CURRENT     800//1000 // in mA
   #define X_SENSE_RESISTOR    91 // in mOhms
   #define X_MICROSTEPS        16 // number of microsteps
 
-  #define X2_MAX_CURRENT    1000
+  #define X2_MAX_CURRENT    800//1000
   #define X2_SENSE_RESISTOR   91
   #define X2_MICROSTEPS       16
 
-  #define Y_MAX_CURRENT     1000
+  #define Y_MAX_CURRENT     800//1000
   #define Y_SENSE_RESISTOR    91
   #define Y_MICROSTEPS        16
 
-  #define Y2_MAX_CURRENT    1000
+  #define Y2_MAX_CURRENT    800//1000
   #define Y2_SENSE_RESISTOR   91
   #define Y2_MICROSTEPS       16
 
-  #define Z_MAX_CURRENT     1000
+  #define Z_MAX_CURRENT     800//1000
   #define Z_SENSE_RESISTOR    91
   #define Z_MICROSTEPS        16
 
-  #define Z2_MAX_CURRENT    1000
+  #define Z2_MAX_CURRENT    800//1000
   #define Z2_SENSE_RESISTOR   91
   #define Z2_MICROSTEPS       16
 
-  #define E0_MAX_CURRENT    1000
+  #define E0_MAX_CURRENT    800//1000
   #define E0_SENSE_RESISTOR   91
   #define E0_MICROSTEPS       16
 
-  #define E1_MAX_CURRENT    1000
+  #define E1_MAX_CURRENT    800//1000
   #define E1_SENSE_RESISTOR   91
   #define E1_MICROSTEPS       16
 
-  #define E2_MAX_CURRENT    1000
+  #define E2_MAX_CURRENT    800//1000
   #define E2_SENSE_RESISTOR   91
   #define E2_MICROSTEPS       16
 
@@ -1221,7 +1221,7 @@
    * M912 - Clear stepper driver overtemperature pre-warn condition flag.
    * M122 S0/1 - Report driver parameters (Requires TMC_DEBUG)
    */
-  //#define MONITOR_DRIVER_STATUS
+  #define MONITOR_DRIVER_STATUS
 
   #if ENABLED(MONITOR_DRIVER_STATUS)
     #define CURRENT_STEP_DOWN     50  // [mA]
@@ -1235,7 +1235,7 @@
    * STEALTHCHOP needs to be enabled.
    * M913 X/Y/Z/E to live tune the setting
    */
-  //#define HYBRID_THRESHOLD
+  #define HYBRID_THRESHOLD
 
   #define X_HYBRID_THRESHOLD     100  // [mm/s]
   #define X2_HYBRID_THRESHOLD    100
@@ -1273,7 +1273,7 @@
    * Enable M122 debugging command for TMC stepper drivers.
    * M122 S0/1 will enable continous reporting.
    */
-  //#define TMC_DEBUG
+  #define TMC_DEBUG
 
   /**
    * M915 Z Axis Calibration
