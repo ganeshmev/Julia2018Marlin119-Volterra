@@ -74,7 +74,7 @@
 #elif BV(JULIA_2018_PRO_DUAL_A) || BV(JULIA_2018_PRO_DUAL_A24)
   #define X_BED_SIZE  395
   #define Y_BED_SIZE  400
-  #define Z_MAX_POS   415
+  #define Z_MAX_POS   410
 #endif
 
 /** Min Pos **/
@@ -106,10 +106,10 @@
 #if BV_PRO() || BV_PRO_ABL() || BV_PRO_ABL24()
   #define INVERT_X_DIR    false//true//false
   #define INVERT_Y_DIR    false//true//false
-  #define INVERT_Z_DIR    false//true
+  #define INVERT_Z_DIR    true
 
-  #define INVERT_E0_DIR   true//false
-  #define INVERT_E1_DIR   false//true
+  #define INVERT_E0_DIR   false
+  #define INVERT_E1_DIR   true
 #else
   #define INVERT_X_DIR    true//false
   #define INVERT_Y_DIR    true//false
