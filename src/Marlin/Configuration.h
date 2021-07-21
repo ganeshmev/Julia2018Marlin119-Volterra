@@ -345,8 +345,8 @@
 // When temperature exceeds max temp, your heater will be switched off.
 // This feature exists to protect your hotend from overheating accidentally, but *NOT* from thermistor short/failure!
 // You should use MINTEMP for thermistor short/failure protection.
-#define HEATER_0_MAXTEMP 470
-#define HEATER_1_MAXTEMP 470
+#define HEATER_0_MAXTEMP 400
+#define HEATER_1_MAXTEMP 400
 #define HEATER_2_MAXTEMP 120  //Chamber heater or Build volume heater
 #define HEATER_3_MAXTEMP 80  //Filament chamber heater
 //#define HEATER_4_MAXTEMP 275
@@ -612,7 +612,7 @@
  */
 // #define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
 
-/** 
+/**
  * Default Max Acceleration (change/s) change = mm/s
  * (Maximum start speed for accelerated moves)
  * Override with M201
@@ -1914,7 +1914,7 @@
 // Delay (in milliseconds) before the next move will start, to give the servo time to reach its target angle.
 // 300ms is a good value but you can try less delay.
 // If the servo can't reach the requested position, increase it.
-#define SERVO_DELAY { 600 }
+#define SERVO_DELAY { 1000 }
 
 // Servo deactivation
 //

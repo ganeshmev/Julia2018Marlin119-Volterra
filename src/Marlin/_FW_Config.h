@@ -74,7 +74,7 @@
 #elif BV(JULIA_2018_PRO_DUAL_A) || BV(JULIA_2018_PRO_DUAL_A24)
   #define X_BED_SIZE  395
   #define Y_BED_SIZE  400
-  #define Z_MAX_POS   410
+  #define Z_MAX_POS   420
 #endif
 
 /** Min Pos **/
@@ -104,19 +104,18 @@
 #define E1_DRIVER_TYPE    TMC2208//DRV8825
 
 #if BV_PRO() || BV_PRO_ABL() || BV_PRO_ABL24()
-  #define INVERT_X_DIR    false//true//false
-  #define INVERT_Y_DIR    false//true//false
-  #define INVERT_Z_DIR    true
-
-  #define INVERT_E0_DIR   false
-  #define INVERT_E1_DIR   true
-#else
   #define INVERT_X_DIR    true//false
   #define INVERT_Y_DIR    true//false
-  #define INVERT_Z_DIR    true//false
+  #define INVERT_Z_DIR    false//true
 
-  #define INVERT_E0_DIR   false//true
+  #define INVERT_E0_DIR   true//false
   #define INVERT_E1_DIR   false//true
+#else
+  #define INVERT_X_DIR    false
+  #define INVERT_Y_DIR    false
+  #define INVERT_Z_DIR    false
+
+  #define INVERT_E0_DIR   true
 #endif
 
 /**  Enstops  **/
@@ -143,8 +142,8 @@
   #define MANUAL_Z_HOME_POS Z_MAX_POS
 #endif
 
-#define HOMING_FEEDRATE_XY  (80*60)
-#define HOMING_FEEDRATE_Z   (30*60)
+#define HOMING_FEEDRATE_XY  (50*60)
+#define HOMING_FEEDRATE_Z   (20*60)
 
 /**  Movement  **/
 #define S_CURVE_ACCELERATION
@@ -155,7 +154,7 @@
   #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160,  160, 1007.874, 280 }
 #endif
 #if BV_PRO() || BV_PRO_ABL() || BV_PRO_ABL24()
-  #define DEFAULT_MAX_FEEDRATE          { 400, 400, 20, 45 }//{ 300, 300, 20, 45 }
+  #define DEFAULT_MAX_FEEDRATE          { 300, 300, 20, 45 }
 #else
   #define DEFAULT_MAX_FEEDRATE          { 200, 200, 20, 45 }
 #endif
@@ -163,14 +162,14 @@
   #define DEFAULT_MAX_ACCELERATION      { 600, 600, 50, 10000 }
   #define DEFAULT_ACCELERATION          400    // X, Y, Z and E acceleration for printing moves
 #elif BV_PRO_ABL24()
-  #define DEFAULT_MAX_ACCELERATION      { 1600, 1600, 65, 10000 }//{ 1500, 1500, 50, 10000 }
-  #define DEFAULT_ACCELERATION          1100//1000    // X, Y, Z and E acceleration for printing moves
+  #define DEFAULT_MAX_ACCELERATION      { 1500, 1500, 50, 10000 }
+  #define DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves
 #else
   #define DEFAULT_MAX_ACCELERATION      { 1500, 1500, 50, 10000 }
   #define DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves
 #endif
 #define DEFAULT_RETRACT_ACCELERATION  2000    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   1200//1000    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves
 #define DEFAULT_XJERK                 10.0
 #define DEFAULT_YJERK                 10.0
 #define DEFAULT_ZJERK                 0.4
@@ -218,9 +217,9 @@
 #define TEMP_BED_RESIDENCY_TIME 2
 
 /**  PID temperature settings  **/
-#define  DEFAULT_Kp   33.65//67.13 // 42.96///Hot tighten at 395DegC
-#define  DEFAULT_Ki   6.22//10.75 // 5.14
-#define  DEFAULT_Kd   45.49//104.85 // 89.73
+#define  DEFAULT_Kp   67.13 // 42.96
+#define  DEFAULT_Ki   10.75 // 5.14
+#define  DEFAULT_Kd   104.85 // 89.73
 
 /**  Thermal Runaway  **/
 #if NBV(JULIA_2018_GLCD)
