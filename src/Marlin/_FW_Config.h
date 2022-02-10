@@ -104,12 +104,12 @@
 #define E1_DRIVER_TYPE    TMC2208//DRV8825
 
 #if BV_PRO() || BV_PRO_ABL() || BV_PRO_ABL24()
-  #define INVERT_X_DIR    true//false//false
-  #define INVERT_Y_DIR    true//false//false
-  #define INVERT_Z_DIR    false//true//true
+  #define INVERT_X_DIR    false//false
+  #define INVERT_Y_DIR    false//false
+  #define INVERT_Z_DIR    true//true
 
-  #define INVERT_E0_DIR   true//false//false
-  #define INVERT_E1_DIR   false//true//true
+  #define INVERT_E0_DIR   false//false
+  #define INVERT_E1_DIR   true//true
 #else
   #define INVERT_X_DIR    false
   #define INVERT_Y_DIR    false
@@ -163,7 +163,7 @@
   #define DEFAULT_ACCELERATION          400    // X, Y, Z and E acceleration for printing moves
 #elif BV_PRO_ABL24()
   #define DEFAULT_MAX_ACCELERATION      { 800, 800, 50, 10000 }
-  #define DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves
+  #define DEFAULT_ACCELERATION          800//1000    // X, Y, Z and E acceleration for printing moves
 #else
   #define DEFAULT_MAX_ACCELERATION      { 1500, 1500, 50, 10000 }
   #define DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves
