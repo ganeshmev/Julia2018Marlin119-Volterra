@@ -104,8 +104,8 @@
 #define E1_DRIVER_TYPE    TMC2208//DRV8825
 
 #if BV_PRO() || BV_PRO_ABL() || BV_PRO_ABL24()
-  #define INVERT_X_DIR    false//false
-  #define INVERT_Y_DIR    false//false
+  #define INVERT_X_DIR    true//false//false
+  #define INVERT_Y_DIR    true//false//false
   #define INVERT_Z_DIR    false//true//true
 
   #define INVERT_E0_DIR   true//false//false
